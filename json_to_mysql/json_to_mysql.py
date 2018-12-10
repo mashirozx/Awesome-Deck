@@ -24,7 +24,12 @@ def jsonToMySQL(host, user, passwd, db, table_name, json_file):
              hs_jsonId INT,
              hs_dbfId INT,
              hs_id VARCHAR(225),
-             hs_name VARCHAR(225)) DEFAULT CHARSET=utf8'''
+             hs_name VARCHAR(225),
+             hs_cost INT,
+             hs_rarity VARCHAR(225)) DEFAULT CHARSET=utf8'''
+
+    header_tag_list = ('dbfId','id','name','cost','rarity')
+    char_type_tags = ('id', 'name', 'rarity')
 
     cursor.execute(sql_create_table)
 
@@ -34,17 +39,36 @@ def jsonToMySQL(host, user, passwd, db, table_name, json_file):
     print (len(json_data))
 
     for i in range(0, len(json_data), 1):
+    #for i in range(0, 10, 1):
+        '''
         if 'dbfId' not in json_data[i] or 'name' not in json_data[i] or 'id' not in json_data[i]:
             print("data missing: jsonId="+str(i))
             continue
+        '''
+        data = {'id': i}
+        for header_tag in header_tag_list:
+            if header_tag in json_data[i]:
+                data[header_tag] = str(json_data[i][header_tag])
 
+        sql_pre_key = '(hs_jsonId'
+        sql_pre_value = '(' + str(i)
+        for key, value in data.items():
+            sql_pre_key = sql_pre_key + ', hs_' + key
+            if key in char_type_tags:
+                sql_pre_value = sql_pre_value + ', "' + value + '"'
+            else:
+                sql_pre_value = sql_pre_value + ', ' + value
+        sql_pre_key = sql_pre_key + ')'
+        sql_pre_value = sql_pre_value + ')'
+
+        '''
         data_jsonId = str(i)
         data_dbfId = str(json_data[i]['dbfId']) # 2539
         data_id = json_data[i]['id']            # AT_001
         data_name = json_data[i]['name']        # 炎枪术
-        sql_pre_value = '(' + data_jsonId + ',' + data_dbfId + ',"' + data_id + '","' + data_name + '")'
-        print (sql_pre_value)
-        sql_insert = '''INSERT INTO ''' + table_name + '''(hs_jsonId, hs_dbfId, hs_id, hs_name) VALUES ''' + sql_pre_value
+        '''
+        sql_insert = '''INSERT INTO ''' + table_name + sql_pre_key + ''' VALUES ''' + sql_pre_value
+        print (sql_insert)
 
         try:
            # 执行sql语句
@@ -55,7 +79,7 @@ def jsonToMySQL(host, user, passwd, db, table_name, json_file):
         except:
            # Rollback in case there is any error
            db.rollback()
-           print('err: jsonId=' + data_jsonId)
+           print('err: jsonId=' + str(i))
            print (sql_insert)
 
     #disconnect db
