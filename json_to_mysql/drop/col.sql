@@ -1,0 +1,1 @@
+select hs_rarity,count(hs_rarity) from cards_data_27845 group by hs_rarity having count(hs_rarity)>1;

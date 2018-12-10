@@ -1,8 +1,7 @@
-from deck.private.deck_code_decode import *
-from deck.private.dbfId_to_id import *
-
+'''
+before merging to main.py do not forget add path: `private.`
+'''
 def main(deck_name,deck_code):
 
-    html_print = str(deck_code_decode(deck_code)[0])+'<br>'+deck_code
-
+    html_print = '''<body><img src="/static/img.jpg"></body>'''
     return html_print

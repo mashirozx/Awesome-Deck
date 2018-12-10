@@ -11,9 +11,9 @@ import MySQLdb
 import json
 import os
 
-def jsonToMySQL(host, user, passwd, db, table_name, json_file):
+def jsonToMySQL(host, user, passwd, db_name, table_name, json_file):
     #link db
-    db = MySQLdb.connect(host, user, passwd, db, use_unicode=True, charset="utf8")
+    db = MySQLdb.connect(host, user, passwd, db_name, use_unicode=True, charset="utf8")
     cursor = db.cursor()
 
     #delete already exist table
