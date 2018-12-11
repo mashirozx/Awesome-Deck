@@ -1,4 +1,4 @@
-from json_to_mysql.json_to_mysql import *
+from db_initial.json_to_mysql import *
 import configparser
 
 # Conf Parser

@@ -59,16 +59,17 @@ def sqlFind(dbfId):
 
     sql = "SELECT * FROM " + table_name + " WHERE hs_dbfId = %s" % (dbfId) #435
     try:
-       cursor.execute(sql)
-       results = cursor.fetchall()
+        cursor.execute(sql)
+        results = cursor.fetchall()
 
-       card_id = results[0][2]
-       card_name = results[0][3]
-       card_cost = results[0][4]
-       card_rarity = results[0][5]
+        card_id = results[0][2]
+        card_name = results[0][3]
+        card_cost = results[0][4]
+        card_rarity = results[0][5]
 
     except:
-       print ("Error: unable to fecth data")
+        #print ("Error: unable to fecth data")
+        #需要考虑传递一下错误的参数
 
     db.close()
     # Formate: {'id': card_id, 'name': card_name, 'cost': card_cost, 'rarity': card_rarity}
