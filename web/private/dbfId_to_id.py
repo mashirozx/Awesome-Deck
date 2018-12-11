@@ -69,7 +69,7 @@ def sqlFind(dbfId):
 
     except:
         #print ("Error: unable to fecth data")
-        #需要考虑传递一下错误的参数
+        ''''需要考虑传递一下错误的参数'''
 
     db.close()
     # Formate: {'id': card_id, 'name': card_name, 'cost': card_cost, 'rarity': card_rarity}

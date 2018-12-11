@@ -1,21 +1,52 @@
 # Hearthstone Deck Embed Tool
 
-TODO：
+A simple Hearthstone card deck API that you can easily embed in your site with iframe. The backend of [Awesome Deck](https://deck.2heng.xin/).
 
-* 用django的template结构化一下 
+Work with Python3, Django, and MySQL/MariaDB.
 
-后端流程：
+## How to Use
 
+### Requirements
+Install pip for Python3:
 ```
-输入卡组代码，传递给main.py
-    |
-    |
-deck_code_decode.py 解码
-    |
-    |
-dbfId_to_id.py 查询卡牌信息
-    |
-    |
-html_generator.py 生成 hmtl
-
+apt install python3-pip
 ```
+
+Install required packages:
+```
+pip install -r requirements.txt
+```
+
+If you see something like:
+> EnvironmentError: mysql_config not found
+
+You should install libmysqlclient-dev:
+```
+sudo apt install default-libmysqlclient-dev
+```
+
+### Configuration
+Rename the configuration file `conf.sample.ini` as `conf.ini`, and fill in your info.
+
+### Initialize Database
+Cards data from [HearthstoneJSON](https://github.com/HearthSim/hsdata), get the latest Json data [here](https://api.hearthstonejson.com/v1/).
+
+Initialize the Database with:
+```
+python db_initial.py
+```
+
+Then you can run the test server:
+```
+python web/manage.py runserver 0.0.0.0:8000
+```
+
+Or run with uwsgi:
+```
+uwsgi --http :8000 --module web.wsgi
+```
+
+Then visit: <http://127.0.0.1:8000/>.
+
+### Author
+© [Mashiro](https://github.com/mashirozx/), Released under the [MIT](https://github.com/mashirozx/hearthstone-deck-embed/blob/master/LICENSE) License.
