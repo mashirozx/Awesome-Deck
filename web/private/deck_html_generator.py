@@ -3,6 +3,8 @@
 container_html = '''
 
 <link rel="stylesheet" href="/static/style.css">
+<link rel="stylesheet" href="/static/theme.css">
+
 <main>
     <div id="main-inner">
         <section class="section-decklist">
@@ -13,13 +15,19 @@ container_html = '''
     </div>
 </main>
 
+<script src="/static/deck.js"></script>
+<script src="/static/iframe_fit.js"></script>
 '''
 
 # hero header
 # {{id}}  {{deck_code}}  {{deck_name}}
 hero_html = '''
 
-                <div class="hs-decklist-hero"><img src="https://art.hearthstonejson.com/v1/256x/{{id}}.jpg">
+                <div class="hs-decklist-hero">
+                    <div class="hs-decklist-hero-frame">
+                        <img src="/static/img/CustomDeck_phone-Recovered.png" class="hero-frame">
+                        <img src="https://art.hearthstonejson.com/v1/256x/{{id}}.jpg" class="hero-image">
+                    </div>
                     <div class="hs-decklist-title">
                         <input id="deck-title-input" data-deckcode="{{deck_code}}" type="text" class="mdc-textfield__input" value="{{deck_name}}" maxlength="30">
                     </div>

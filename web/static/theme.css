@@ -1,0 +1,66 @@
+.section-decklist {
+    padding: 0 !important
+}
+
+.section-decklist>* {
+    margin-left: 260px;
+    padding: 37px 70px !important;
+}
+
+.mdc-list{
+    width: 500px;
+}
+.hs-decklist .mdc-list-item {
+    float :left;
+    padding-right: 6px;
+}
+
+.hs-decklist-hero {
+    margin: 0 -250px !important;
+    position: absolute;
+}
+
+.hs-decklist .hs-tile-info .hs-tile-info-right {
+    right: 5px !important;
+}
+
+.preview-card {
+    overflow: visible !important;
+    z-index: 400 !important;
+    left: 70px !important;
+    top: 110px !important;
+    position: fixed !important;
+}
+
+input{
+    /*pointer-events: none;*/
+}
+
+main {
+    background-repeat: no-repeat;
+    background-size: 900px 100%;
+    background-image: url(https://view.moezx.cc/images/2018/12/09/bg_standard.png);
+    height: 500px;
+    width: 900px;
+    transform-origin: top left;
+}
+
+.hs-decklist-hero-frame {
+    height: 101px;
+    width: 256px;
+    overflow: hidden;
+    transform-origin: top left;
+    transform: scale(0.95,1);
+}
+body,html {
+    /*cursor: url(https://api.mashiro.top/hearthstone-deck/hand.cur), auto !important;*/
+    overflow:hidden;
+    /*
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    */
+}
