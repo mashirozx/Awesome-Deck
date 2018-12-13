@@ -8,12 +8,12 @@ Work with Python3, Django, and MySQL/MariaDB.
 
 ### Requirements
 Install pip for Python3:
-```
+```shell
 apt install python3-pip
 ```
 
 Install required packages:
-```
+```shell
 pip install -r requirements.txt
 ```
 
@@ -21,7 +21,7 @@ If you see something like:
 > EnvironmentError: mysql_config not found
 
 You should install libmysqlclient-dev:
-```
+```shell
 sudo apt install default-libmysqlclient-dev
 ```
 
@@ -32,17 +32,18 @@ Rename the configuration file `conf.sample.ini` as `conf.ini`, and fill in your 
 Cards data from [HearthstoneJSON](https://github.com/HearthSim/hsdata), get the latest Json data [here](https://api.hearthstonejson.com/v1/).
 
 Initialize the Database with:
-```
+```shell
 python db_initial.py
 ```
 
 Then you can run the test server:
-```
+```shell
 python web/manage.py runserver 0.0.0.0:8000
 ```
 
 Or run with uwsgi:
-```
+```shell
+cd web/web
 uwsgi --http :8000 --module web.wsgi
 ```
 
