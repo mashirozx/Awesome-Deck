@@ -5,7 +5,7 @@ container_html = '''
 <link rel="stylesheet" href="/static/style.css">
 <link rel="stylesheet" href="/static/theme.css">
 
-<main>
+<main id="main">
     <div id="main-inner">
         <section class="section-decklist">
             <div class="hs-decklist-container">
