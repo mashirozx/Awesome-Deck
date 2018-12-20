@@ -10,8 +10,14 @@ Desc: Convert Hearthstone cards data to MySQL.
 import MySQLdb
 import json
 import os
+import requests
 
-def jsonToMySQL(host, user, passwd, db_name, table_name, json_file):
+def jsonToMySQL(host, user, passwd, db_name, table_name):
+    json_url = 'https://api.hearthstonejson.com/v1/latest/zhCN/cards.json'
+    json_response = requests.get(json_url)
+    #print (response.text)
+    json_data = json_response.json()
+
     #link db
     db = MySQLdb.connect(host, user, passwd, db_name, use_unicode=True, charset="utf8")
     cursor = db.cursor()
@@ -33,8 +39,8 @@ def jsonToMySQL(host, user, passwd, db_name, table_name, json_file):
 
     cursor.execute(sql_create_table)
 
-    with open(json_file, 'r', encoding='UTF-8') as f:
-        json_data = json.load(f)
+    #with open(json_file, 'r', encoding='UTF-8') as f:
+    #    json_data = json.load(f)
 
     print (len(json_data))
 

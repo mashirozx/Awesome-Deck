@@ -10,10 +10,9 @@ host = db_conf['Host']
 user = db_conf['User']
 passwd = db_conf['Password']
 db_name = db_conf['Database']
-table_name = db_conf['TablePrefix'] + db_conf['HearthstoneVersion']
-json_file = db_conf['JsonFilePath']
+table_name = db_conf['TableName']
 
-jsonToMySQL(host, user, passwd, db_name, table_name, json_file)
+jsonToMySQL(host, user, passwd, db_name, table_name)
 
 key = input('Press any key to quit')
 quit()

@@ -2,6 +2,8 @@
 # {{content}}
 container_html = '''
 
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/HubSpot/pace@0.7.8/themes/black/pace-theme-center-circle.css">
+<script src="https://cdn.jsdelivr.net/gh/HubSpot/pace@0.7.8/pace.min.js"></script>
 <link rel="stylesheet" href="/static/style.css">
 <link rel="stylesheet" href="/static/theme.css">
 
