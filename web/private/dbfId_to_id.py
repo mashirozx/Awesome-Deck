@@ -52,7 +52,7 @@ def sqlFind(dbfId):
     user = db_conf['User']
     passwd = db_conf['Password']
     db_name = db_conf['Database']
-    table_name = db_conf['TablePrefix'] + db_conf['HearthstoneVersion']
+    table_name = db_conf['TableName']
 
     db = MySQLdb.connect(host, user, passwd, db_name, use_unicode=True, charset="utf8")
     cursor = db.cursor()
