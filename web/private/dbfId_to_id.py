@@ -91,7 +91,7 @@ def dbfIdToId(deck_hero_dbfId, deck_card_dbfId):
 
     deck_cards_ordered = []
     rarity_tags = ["FREE", "COMMON", "RARE", "EPIC", "LEGENDARY"]
-    for i in range(1, max_cost + 1, 1):
+    for i in range(0, max_cost + 1, 1):
         for t in rarity_tags:
             for x in deck_cards:
                 if x[3] == i and x[4] == t:
