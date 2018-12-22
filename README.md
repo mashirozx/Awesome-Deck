@@ -39,7 +39,7 @@ python db_initial.py
 <details>
 <summary>Auto Start Configuration</summary>
 
-Latter if you need a cards data auto update (who knows when Bilzzard will release a hotfix and diminish some cards), there's a auto update database script `auto_update.py`, add it to system autostart task, and then for every 6 hours (you may change it to any interval by modifying the scrpit).
+Latter if you need a cards data auto update (who knows when Bilzzard will release a hotfix and diminish some cards), there's a database auto update script `auto_update.py`, add it to system autostart tasks, and then for every 6 hours (you may change it to any interval by modifying the scrpit).
 
 On a Ubuntu 18+, you may do so:
 
