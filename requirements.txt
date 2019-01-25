@@ -28,7 +28,7 @@ Pygments==2.3.1
 pygobject==3.30.4
 PyJWT==1.7.1
 PyMySQL==0.9.3
-pyOpenSSL==17.5.0
+pyOpenSSL==19.0.0
 pyxdg==0.25
 PyYAML==3.12
 requests==2.18.4
