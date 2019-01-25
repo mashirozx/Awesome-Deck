@@ -22,7 +22,7 @@ MarkupSafe==1.1.0
 mock==2.0.0
 oauthlib==3.0.1
 pbr==5.1.1
-prettytable==0.7.2
+prettytable==7
 pycrypto==2.6.1
 Pygments==2.2.0
 pygobject==3.26.1
