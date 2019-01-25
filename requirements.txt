@@ -15,7 +15,7 @@ Jinja2==2.10
 jsonpatch==1.23
 jsonpointer==2.0
 jsonschema==2.6.0
-keyring==10.6.0
+keyring==17.1.1
 keyrings.alt==3.0
 Markdown==2.6.9
 MarkupSafe==1.0
