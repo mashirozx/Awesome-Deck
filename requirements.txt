@@ -13,7 +13,7 @@ idna==2.8
 ipaddress==1.0.22
 Jinja2==2.10
 jsonpatch==1.23
-jsonpointer==1.10
+jsonpointer==2.0
 jsonschema==2.6.0
 keyring==10.6.0
 keyrings.alt==3.0
