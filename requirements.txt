@@ -12,7 +12,7 @@ functools32==3.2.3.post2
 idna==2.8
 ipaddress==1.0.22
 Jinja2==2.10.1
-jsonpatch==1.23
+jsonpatch==1.24
 jsonpointer==2.0
 jsonschema==2.6.0
 keyring==17.1.1
