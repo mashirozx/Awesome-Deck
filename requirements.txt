@@ -24,7 +24,7 @@ oauthlib==3.1.0
 pbr==5.4.3
 prettytable==7
 pycrypto==2.6.1
-Pygments==2.3.1
+Pygments==2.4.2
 pygobject==3.30.4
 PyJWT==1.7.1
 PyMySQL==0.9.3
