@@ -5,7 +5,7 @@ chardet==3.0.4
 Cheetah==2.4.4
 cloud-init==0.7.9
 configobj==5.0.6
-cryptography==2.7
+cryptography==3.2
 enum34==1.1.6
 funcsigs==1.0.2
 functools32==3.2.3.post2
