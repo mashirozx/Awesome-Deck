@@ -6,7 +6,7 @@ Cheetah==2.4.4
 cloud-init==0.7.9
 configobj==5.0.6
 cryptography==3.2.1
-enum34==1.1.6
+enum34==1.1.10
 funcsigs==1.0.2
 functools32==3.2.3.post2
 idna==2.8
