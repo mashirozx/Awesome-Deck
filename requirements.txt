@@ -9,7 +9,7 @@ cryptography==3.2.1
 enum34==1.1.10
 funcsigs==1.0.2
 functools32==3.2.3.post2
-idna==2.8
+idna==2.10
 ipaddress==1.0.22
 Jinja2==2.10.3
 jsonpatch==1.24
