@@ -1,6 +1,6 @@
 asn1crypto==1.4.0
 blinker==1.4
-certifi==2019.9.11
+certifi==2020.6.20
 chardet==3.0.4
 Cheetah==2.4.4
 cloud-init==0.7.9
